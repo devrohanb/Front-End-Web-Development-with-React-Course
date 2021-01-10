@@ -1,9 +1,9 @@
-import logo from "./logo.svg";
 import { Navbar, NavbarBrand } from "reactstrap";
 import Menu from "./components/MenuComponent";
 import "./App.css";
 import { DISHES } from "./shared/dishes";
 import { Component } from "react";
+import DishDetails from "./components/DishDetailsComponent";
 
 class App extends Component {
   constructor(props) {
