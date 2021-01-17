@@ -1,7 +1,8 @@
 // Sudo container component
-import { Navbar, NavbarBrand } from "reactstrap";
 import Menu from "./MenuComponent";
 import DishDetails from "./DishDetailsComponent";
+import Header from "./HeaderComponent";
+import Footer from "./FooterComponent";
 import { DISHES } from "../shared/dishes";
 import { Component } from "react";
 
@@ -22,18 +23,15 @@ class Main extends Component {
   render() {
     return (
       <div>
-        {/* // TODO: Navbar */}
-        <Navbar dark color="primary">
-          <div className="container">
-            <NavbarBrand href="/">Ristorante Con Fusion</NavbarBrand>
-          </div>
-        </Navbar>
+        {/* Header Component */}
+        <Header />
+
         {/* TODO: Menu component */}
         <Menu
           dishes={this.state.dishes}
           onClick={(dishId) => this.onDishSelect(dishId)}
         />
-        {/* Here "dishes" is a prop */}
+        {/* DishDetails Component */}
         <DishDetails
           dish={
             this.state.dishes.filter(
@@ -41,6 +39,8 @@ class Main extends Component {
             )[0]
           }
         />
+        {/* Footer Coomponent */}
+        <Footer />
       </div>
     );
   }

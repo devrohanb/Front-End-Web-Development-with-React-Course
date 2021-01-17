@@ -50,9 +50,9 @@ function RenderComments({ dish }) {
 
 const DishDetail = (props) => {
   console.log("DishDetail Component's render() is invoked.");
-  const dishSelected = props.dish;
+  // const dishSelected = props.dish;
   return (
-    <div className="container">
+    <div key={props.dish} className="container">
       <div className="row">
         <RenderDish dish={props.dish} />
         <RenderComments dish={props.dish} />
